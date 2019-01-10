@@ -187,12 +187,12 @@
         }
 
         .blue {
-            color: #ffffff;
-            border: solid 1px #d9534f;
-            background: #d9534f;
-            background: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#d9534f));
-            background: -moz-linear-gradient(top, #d9534f, #d9534f);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9534f', endColorstr='#d9534f');
+            color: #d9eef7;
+            border: solid 1px #0076a3;
+            background: #0095cd;
+            background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+            background: -moz-linear-gradient(top, #00adee, #0078a5);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
         }
 
         .button {
@@ -242,7 +242,6 @@
     </style>
     <script type="text/javascript" src="Scripts/jquery.js"></script>
     <script type="text/javascript" src="Scripts/jquery.slotmachine.min.js"></script>
-    <script type="text/javascript" src="js/config.js"></script>
 </head>
 <body>
     <div class="slot-machine">
@@ -330,6 +329,14 @@
             var luckNumber = [];
             $(function () {
                 $(".slotMachine").each(function () {
+                    var arr = [
+                        '0964953029',
+                        '0121424544',
+                        '2135436547',
+                        '3465754853',
+                        '2135436542',
+                        '3465754854',
+                    ];
                     for (var i = 0; i < arr.length; i++) {
                         $(this).append("<div class='slot'>" + zeroPad(arr[i], 10) + "</div>");
                     }
