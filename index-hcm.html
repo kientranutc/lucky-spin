@@ -247,7 +247,7 @@
     <div class="slot-machine">
         <div class="w1000">
             <div class="logo">
-                <img src="Images/logo_DKT_org.png" />
+                <img src="Images/logo.png" />
             </div>
             <div class="resul-1">
                 <h3><i class="icon-star winner"></i> Giải khuyến khích <i class="icon-star winner"></i></h3>
@@ -255,13 +255,13 @@
                     <div class="slot slot-four">Start</div>
                 </div>
                 <div id="machine2" class="slotMachine">
-                    <div class="slot slot-four">Start</div>
+                    <div class="slot">Start</div>
                 </div>
                 <div id="machine3" class="slotMachine">
-                    <div class="slot slot-four">Start</div>
+                    <div class="slot">Start</div>
                 </div>
                 <div id="machine4" class="slotMachine">
-                    <div class="slot slot-four">Start</div>
+                    <div class="slot">Start</div>
                 </div>
                 <div id="machine5" class="slotMachine">
                     <div class="slot slot-four">Start</div>
@@ -328,27 +328,28 @@
         <script type="text/javascript">
             var luckNumber = [];
             $(function () {
+                var arr = [
+                    '0964953029',
+                    '0121424544',
+                    '2135436547',
+                    '3465754853',
+                    '2135436501',
+                    '3465754802',
+                    '0964953003',
+                    '0121424504',
+                    '2135436505',
+                    '3465754806',
+                    '2135436507',
+                    '3465754808',
+                    '0964953009',
+                    '0121424510',
+                    '2135436511',
+                    '3465754812',
+                    '2135436513',
+                    '3465754821',
+                ];
+
                 $(".slotMachine").each(function () {
-                    var arr = [
-                        '0964953029',
-                        '0121424544',
-                        '2135436547',
-                        '3465754853',
-                        '2135436501',
-                        '3465754802',
-                        '0964953003',
-                        '0121424504',
-                        '2135436505',
-                        '3465754806',
-                        '2135436507',
-                        '3465754808',
-                        '0964953009',
-                        '0121424510',
-                        '2135436511',
-                        '3465754812',
-                        '2135436513',
-                        '3465754821',
-                    ];
                     for (var i = 0; i < arr.length; i++) {
                         $(this).append("<div class='slot'>" + zeroPad(arr[i], 10) + "</div>");
                     }
@@ -360,12 +361,12 @@
                 });
 
                 var machine2 = $("#machine2").slotMachine({
-                    active: 8,
+                    active: 50,
                     delay: 2000
                 });
 
                 var machine3 = $("#machine3").slotMachine({
-                    active: 10,
+                    active: 60,
                     delay: 2000
                 });
 
