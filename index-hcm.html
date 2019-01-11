@@ -1,4 +1,4 @@
-﻿<html>
+﻿﻿<html>
 <head>
     <meta charset="utf-8" />
     <title>Sổ xố cuối năm</title>
@@ -110,7 +110,9 @@
             margin: 0 0;
             padding: 0 0;
         }
-
+        .slotFirst.two-slot-first-one {
+            margin-left: 120px;
+        }
         body {
             background: url(Images/bg.jpg) no-repeat center center fixed;
         }
@@ -246,487 +248,533 @@
     <script type="text/javascript" src="Scripts/data.js"></script>
 </head>
 <body>
-    <div class="slot-machine">
-        <div class="w1000">
-            <div class="logo">
-                <img src="Images/logo.png" />
-            </div>
-            <div class="resul-1">
-                <h3><i class="icon-star winner"></i> Giải khuyến khích <i class="icon-star winner"></i></h3>
-                <div id="machine1" class="slotMachine">
-                    <div class="slot slot-four">Start</div>
-                </div>
-                <div id="machine2" class="slotMachine">
-                    <div class="slot">Start</div>
-                </div>
-                <div id="machine3" class="slotMachine">
-                    <div class="slot">Start</div>
-                </div>
-                <div id="machine4" class="slotMachine">
-                    <div class="slot">Start</div>
-                </div>
-                <div id="machine5" class="slotMachine">
-                    <div class="slot slot-four">Start</div>
-                </div>
-                <div class="clear">
-                    <a class="shuffle1 start button orange">Quay thưởng</a>
-                </div>
-            </div>
-
-            <div class="resul-2">
-                <h3><i class="icon-star winner"></i> Giải ba <i class="icon-star winner"></i></h3>
-                <div class="slotMachine" style="visibility: hidden;">
-
-                </div>
-                <div id="machine26" class="slotMachine">
-                    <div class="slot slot-three">Start</div>
-                </div>
-                <div id="machine27" class="slotMachine">
-                    <div class="slot slot-three">Start</div>
-                </div>
-                <div id="machine28" class="slotMachine">
-                    <div class="slot slot-three">Start</div>
-                </div>
-                <div class="clear">
-                    <input type="hidden" name="" id="shuffle6-check" value="0">
-                    <a class="shuffle6 start button orange">Quay thưởng</a>
-                    <a class="shuffle-three stop button blue">Dừng</a>
-                </div>
-            </div>
-
-            <div class="resul-3">
-                <h3><i class="icon-star winner"></i> Giải nhì <i class="icon-star winner"></i></h3>
-                <div class="slotMachine" style="visibility: hidden;">
-                </div>
-                <div id="machine34" class="slotMachine">
-                    <div class="slot slot-two">Start</div>
-                </div>
-                <div id="machine35" class="slotMachine">
-                    <div class="slot slot-two">Start</div>
-                </div>
-                <div class="clear">
-                    <input type="hidden" name="" id="shuffle-two-check" value="0">
-                    <a class="shuffle-two-start start button orange">Quay thưởng</a>
-                    <a class="shuffle-two-stop stop button blue">Dừng</a>
-                </div>
-            </div>
-
-            <div class="resul-4">
-                <h3><i class="icon-star winner"></i> Giải nhất <i class="icon-star winner"></i></h3>
-                <div class="slotMachine" style="visibility: hidden;">
-                </div>
-                <div id="machine38" class="slotMachine">
-                    <div class="slot slot-one">Start</div>
-                </div>
-                <div class="clear">
-                    <input type="hidden" name="" id="shuffle7-check" value="0">
-                    <a class="shuffle7 start button orange">Quay thưởng</a>
-                    <a class="shuffle8 stop button blue">Dừng</a>
-                </div>
-            </div>
-
-
+<div class="slot-machine">
+    <div class="w1000">
+        <div class="logo">
+            <img src="Images/logo.png" />
         </div>
-        <script type="text/javascript">
-            var luckNumber = [];
-            $(function () {
+        <div class="resul-1">
+            <h3><i class="icon-star winner"></i> Giải khuyến khích <i class="icon-star winner"></i></h3>
+            <div id="machine1" class="slotMachine">
+                <div class="slot slot-four">Start</div>
+            </div>
+            <div id="machine2" class="slotMachine">
+                <div class="slot slot-four">Start</div>
+            </div>
+            <div id="machine3" class="slotMachine">
+                <div class="slot slot-four">Start</div>
+            </div>
+            <div id="machine4" class="slotMachine">
+                <div class="slot slot-four">Start</div>
+            </div>
+            <div id="machine5" class="slotMachine">
+                <div class="slot slot-four">Start</div>
+            </div>
+            <div class="clear">
+                <input type="hidden" name="" id="shuffle-five-check" value="0">
+                <a class="shuffle1 start button orange">Quay thưởng</a>
+                <a class="step-five stop button blue">Dừng</a>
+            </div>
+        </div>
 
-                $(".slotMachine").each(function () {
-                    for (var i = 0; i < arr.length; i++) {
-                        $(this).append("<div class='slot'>" + zeroPad(arr[i], 10) + "</div>");
-                    }
-                });
+        <div class="resul-2">
+            <h3><i class="icon-star winner"></i> Giải ba <i class="icon-star winner"></i></h3>
+            <div class="slotMachine" style="visibility: hidden;">
 
-                var machine1 = $("#machine1").slotMachine({
-                    active: 0,
-                    delay: 2000
-                });
+            </div>
+            <div id="machine26" class="slotMachine">
+                <div class="slot slot-three">Start</div>
+            </div>
+            <div id="machine27" class="slotMachine">
+                <div class="slot slot-three">Start</div>
+            </div>
+            <div id="machine28" class="slotMachine">
+                <div class="slot slot-three">Start</div>
+            </div>
+            <div class="slotFirst" style="visibility: hidden;">
+            </div>
+            <div class="slotFirst" style="visibility: hidden;height: auto;">
+            </div>
+            <div class="slotFirst" style="height: auto;"><a class="shuffle3-one stop button blue">Dừng</a></div>
+            <div class="slotFirst" style="height: auto;"><a class="shuffle3-two stop button blue">Dừng</a></div>
+            <div class="slotFirst" style="height: auto;"><a class="shuffle3-three stop button blue">Dừng</a></div>
+            <div class="clear">
+                <input type="hidden" name="" id="shuffle6-check" value="0">
+                <a class="shuffle6 start button orange">Quay thưởng</a>
+            </div>
+        </div>
 
-                var machine2 = $("#machine2").slotMachine({
-                    active: 230,
-                    delay: 2000
-                });
+        <div class="resul-3">
+            <h3><i class="icon-star winner"></i> Giải nhì <i class="icon-star winner"></i></h3>
+            <div class="slotMachine" style="visibility: hidden;">
+            </div>
+            <div id="machine34" class="slotMachine">
+                <div class="slot slot-two">Start</div>
+            </div>
+            <div id="machine35" class="slotMachine">
+                <div class="slot slot-two">Start</div>
+            </div>
+            <div class="slotFirst" style="visibility: hidden;">
+            </div>
+            <div class="slotFirst" style="visibility: hidden;height: auto;">
+            </div>
+            <div class="slotFirst two-slot-first-one" style="height: auto;"><a class="shuffle2-one stop button blue">Dừng</a></div>
+            <div class="slotFirst two-slot-first-two" style="height: auto;"><a class="shuffle2-two stop button blue">Dừng</a></div>
+            <div class="clear">
+                <input type="hidden" name="" id="shuffle-two-check" value="0">
+                <a class="shuffle-two-start start button orange">Quay thưởng</a>
+            </div>
+        </div>
 
-                var machine3 = $("#machine3").slotMachine({
-                    active: 60,
-                    delay: 2000
-                });
-
-                var machine4 = $("#machine4").slotMachine({
-                    active: 230,
-                    delay: 2000
-                });
-
-                var machine5 = $("#machine5").slotMachine({
-                    active: 301,
-                    delay: 2000
-                });
-
-                var machine6 = $("#machine6").slotMachine({
-                    active: 250,
-                    delay: 2000
-                });
-
-                var machine7 = $("#machine7").slotMachine({
-                    active: 380,
-                    delay: 2000
-                });
-
-                var machine8 = $("#machine8").slotMachine({
-                    active: 307,
-                    delay: 2000
-                });
-
-                var machine9 = $("#machine9").slotMachine({
-                    active: 46,
-                    delay: 2000
-                });
-
-                var machine10 = $("#machine10").slotMachine({
-                    active: 78,
-                    delay: 2000
-                });
-
-                var machine11 = $("#machine11").slotMachine({
-                    active: 81,
-                    delay: 2000
-                });
-
-                var machine12 = $("#machine12").slotMachine({
-                    active: 04,
-                    delay: 2000
-                });
-
-                var machine13 = $("#machine13").slotMachine({
-                    active: 93,
-                    delay: 2000
-                });
-
-                var machine14 = $("#machine14").slotMachine({
-                    active: 31,
-                    delay: 2000
-                });
-
-                var machine15 = $("#machine15").slotMachine({
-                    active: 68,
-                    delay: 2000
-                });
-
-                var machine16 = $("#machine16").slotMachine({
-                    active: 97,
-                    delay: 2000
-                });
-
-                var machine17 = $("#machine17").slotMachine({
-                    active: 101,
-                    delay: 2000
-                });
-
-                var machine18 = $("#machine18").slotMachine({
-                    active: 169,
-                    delay: 2000
-                });
-
-                var machine19 = $("#machine19").slotMachine({
-                    active: 0,
-                    delay: 2000
-                });
-
-                var machine20 = $("#machine20").slotMachine({
-                    active: 0,
-                    delay: 2000
-                });
-
-                var machine21 = $("#machine21").slotMachine({
-                    active: 253,
-                    delay: 2000
-                });
-
-                var machine22 = $("#machine22").slotMachine({
-                    active: 345,
-                    delay: 2000
-                });
-
-                var machine23 = $("#machine23").slotMachine({
-                    active: 71,
-                    delay: 2000
-                });
-
-                var machine24 = $("#machine24").slotMachine({
-                    active: 100,
-                    delay: 2000
-                });
-
-                var machine25 = $("#machine25").slotMachine({
-                    active: 198,
-                    delay: 2000
-                });
-
-                var machine26 = $("#machine26").slotMachine({
-                    active: 215,
-                    delay: 2000
-                });
-
-                var machine27 = $("#machine27").slotMachine({
-                    active: 202,
-                    delay: 2000
-                });
-
-                var machine28 = $("#machine28").slotMachine({
-                    active: 470,
-                    delay: 2000
-                });
-
-                var machine29 = $("#machine29").slotMachine({
-                    active: 216,
-                    delay: 2000
-                });
-
-                var machine30 = $("#machine30").slotMachine({
-                    active: 174,
-                    delay: 2000
-                });
-
-                var machine31 = $("#machine31").slotMachine({
-                    active: 141,
-                    delay: 2000
-                });
-
-                var machine32 = $("#machine32").slotMachine({
-                    active: 169,
-                    delay: 2000
-                });
-
-                var machine33 = $("#machine33").slotMachine({
-                    active: 99,
-                    delay: 2000
-                });
-
-                var machine34 = $("#machine34").slotMachine({
-                    active: 250,
-                    delay: 2000
-                });
-
-                var machine35 = $("#machine35").slotMachine({
-                    active: 360,
-                    delay: 2000
-                });
+        <div class="resul-4">
+            <h3><i class="icon-star winner"></i> Giải nhất <i class="icon-star winner"></i></h3>
+            <div class="slotMachine" style="visibility: hidden;">
+            </div>
+            <div id="machine38" class="slotMachine">
+                <div class="slot slot-one">Start</div>
+            </div>
+            <div class="clear">
+                <input type="hidden" name="" id="shuffle7-check" value="0">
+                <a class="shuffle7 start button orange">Quay thưởng</a>
+                <a class="shuffle8 stop button blue">Dừng</a>
+            </div>
+        </div>
 
 
+    </div>
+    <script type="text/javascript">
+        var luckNumber = [];
+        $(function () {
 
-                var machine38 = $("#machine38").slotMachine({
-                    active: 0,
-                    delay: 200
-                });
-
-                var machine40 = $("#machine40").slotMachine({
-                    active: 0,
-                    delay: 200,
-                    direction: 'up'
-                });
-
-                var machine41 = $("#machine41").slotMachine({
-                    active: 0,
-                    delay: 200
-                });
-
-                function onComplete(active) {
-                    var check = false;
-                    var num = this.active;
-                    luckNumber.forEach(function (number) {
-                        if (parseInt(number) == parseInt(num)) {
-                            check = true;
-                        }
-                    });
-                    console.log(check);
-                    if (!check) {
-                        luckNumber.push(this.active);
-                    }
-                    else {
-                        this.shuffle(1, onComplete);
-                    }
+            $(".slotMachine").each(function () {
+                for (var i = 0; i < arr.length; i++) {
+                    $(this).append("<div class='slot'>" + zeroPad(arr[i], 10) + "</div>");
                 }
-
-                $("a.shuffle1").click(function () {
-
-                    $('#machine1 .slot-four').remove();
-
-                    machine1.shuffle(8, onComplete);
-
-                    setTimeout(function () {
-                        $('#machine2 .slot-four').remove();
-                        machine2.shuffle(8, onComplete);
-                    }, 1000);
-
-                    setTimeout(function () {
-                        $('#machine3 .slot-four').remove();
-                        machine3.shuffle(8, onComplete);
-                    }, 2000);
-
-                    setTimeout(function () {
-                        $('#machine4 .slot-four').remove();
-                        machine4.shuffle(8, onComplete);
-                    }, 3000);
-
-                    setTimeout(function () {
-                        $('#machine5 .slot-four').remove();
-                        machine5.shuffle(8, onComplete);
-                    }, 4000);
-                });
-
-                $("a.shuffle2").click(function () {
-                    machine6.shuffle(8, onComplete);
-
-                    setTimeout(function () {
-                        machine7.shuffle(8, onComplete);
-                    }, 1000);
-
-                    setTimeout(function () {
-                        machine8.shuffle(8, onComplete);
-                    }, 2000);
-
-                    setTimeout(function () {
-                        machine9.shuffle(8, onComplete);
-                    }, 3000);
-
-                    setTimeout(function () {
-                        machine10.shuffle(8, onComplete);
-                    }, 4000);
-                });
-
-                $("a.shuffle3").click(function () {
-                    machine11.shuffle(8, onComplete);
-
-                    setTimeout(function () {
-                        machine12.shuffle(8, onComplete);
-                    }, 1000);
-
-                    setTimeout(function () {
-                        machine13.shuffle(8, onComplete);
-                    }, 2000);
-
-                    setTimeout(function () {
-                        machine14.shuffle(8, onComplete);
-                    }, 3000);
-
-                    setTimeout(function () {
-                        machine15.shuffle(8, onComplete);
-                    }, 4000);
-                });
-
-                $("a.shuffle4").click(function () {
-                    machine16.shuffle(8, onComplete);
-
-                    setTimeout(function () {
-                        machine17.shuffle(8, onComplete);
-                    }, 1000);
-
-                    setTimeout(function () {
-                        machine18.shuffle(8, onComplete);
-                    }, 2000);
-
-                    setTimeout(function () {
-                        machine19.shuffle(8, onComplete);
-                    }, 3000);
-
-                    setTimeout(function () {
-                        machine20.shuffle(8, onComplete);
-                    }, 4000);
-                });
-
-                $("a.shuffle5").click(function () {
-                    machine21.shuffle(8, onComplete);
-
-                    setTimeout(function () {
-                        machine22.shuffle(8, onComplete);
-                    }, 1000);
-
-                    setTimeout(function () {
-                        machine23.shuffle(8, onComplete);
-                    }, 2000);
-
-                    setTimeout(function () {
-                        machine24.shuffle(8, onComplete);
-                    }, 3000);
-
-                    setTimeout(function () {
-                        machine25.shuffle(8, onComplete);
-                    }, 4000);
-                });
-
-                $("a.shuffle6").click(function () {
-                    $('#shuffle6-check').val(1);
-                    $('.slot-three').remove();
-                    machine26.shuffle();
-                    machine27.shuffle();
-                    machine28.shuffle();
-                });
-
-                $("a.shuffle-three").click(function () {
-                    var check = $('#shuffle6-check').val();
-                    if (check==1) {
-                        $('#shuffle6-check').val(0);
-                        machine26.shuffle(1, onComplete);
-                        machine27.shuffle(1, onComplete);
-                        machine28.shuffle(1, onComplete);
-                    } else if (check == 0) {
-                        alert('Vui lòng quay thưởng trước!');
-                    }
-                })
-
-                $("a.shuffle7").click(function () {
-                    $('.slot-one').remove();
-                    $('#shuffle7-check').val(1);
-                    machine38.shuffle();
-                });
-
-                $("a.shuffle8.stop").click(function () {
-                    var check = $('#shuffle7-check').val();
-                    if (check==1) {
-                        $('#shuffle7-check').val(0);
-                        machine38.shuffle(1, onComplete);
-                    } else if (check == 0) {
-                        alert('Vui lòng quay thưởng trước!');
-                    }
-                });
-
-                $("a.shuffle9").click(function () {
-                    machine40.shuffle();
-                    machine41.shuffle();
-                });
-                $("a.shuffle-two-start").click(function () {
-                    $('#shuffle-two-check').val(1);
-                    $('.slot-two').remove();
-                    machine34.shuffle();
-                    machine35.shuffle();
-
-                })
-                $("a.shuffle-two-stop").click(function () {
-                    var check = $('#shuffle-two-check').val();
-                    if (check==1) {
-                        $('#shuffle-two-check').val(0);
-                        machine34.shuffle(1, onComplete);
-                        machine35.shuffle(1, onComplete);
-                    } else if (check == 0) {
-                        alert('Vui lòng quay thưởng trước!');
-                    }
-
-                })
-
-                $("a.shuffle11.stop").click(function () {
-                    machine40.stop();
-                });
-                $("a.shuffle12.stop").click(function () {
-                    machine41.stop();
-                });
-
             });
 
-            function zeroPad(nr, base) {
-                var len = (String(base).length - String(nr).length) + 1;
-                return len > 0 ? new Array(len).join('0') + nr : nr;
+            var machine1 = $("#machine1").slotMachine({
+                active: 0,
+                delay: 100
+            });
+
+            var machine2 = $("#machine2").slotMachine({
+                active: 230,
+                delay: 100
+            });
+
+            var machine3 = $("#machine3").slotMachine({
+                active: 60,
+                delay: 100
+            });
+
+            var machine4 = $("#machine4").slotMachine({
+                active: 230,
+                delay: 100
+            });
+
+            var machine5 = $("#machine5").slotMachine({
+                active: 301,
+                delay: 100
+            });
+
+            var machine6 = $("#machine6").slotMachine({
+                active: 250,
+                delay: 2000
+            });
+
+            var machine7 = $("#machine7").slotMachine({
+                active: 380,
+                delay: 2000
+            });
+
+            var machine8 = $("#machine8").slotMachine({
+                active: 307,
+                delay: 2000
+            });
+
+            var machine9 = $("#machine9").slotMachine({
+                active: 46,
+                delay: 2000
+            });
+
+            var machine10 = $("#machine10").slotMachine({
+                active: 78,
+                delay: 2000
+            });
+
+            var machine11 = $("#machine11").slotMachine({
+                active: 81,
+                delay: 2000
+            });
+
+            var machine12 = $("#machine12").slotMachine({
+                active: 04,
+                delay: 2000
+            });
+
+            var machine13 = $("#machine13").slotMachine({
+                active: 93,
+                delay: 2000
+            });
+
+            var machine14 = $("#machine14").slotMachine({
+                active: 31,
+                delay: 2000
+            });
+
+            var machine15 = $("#machine15").slotMachine({
+                active: 68,
+                delay: 2000
+            });
+
+            var machine16 = $("#machine16").slotMachine({
+                active: 97,
+                delay: 2000
+            });
+
+            var machine17 = $("#machine17").slotMachine({
+                active: 101,
+                delay: 2000
+            });
+
+            var machine18 = $("#machine18").slotMachine({
+                active: 169,
+                delay: 2000
+            });
+
+            var machine19 = $("#machine19").slotMachine({
+                active: 0,
+                delay: 2000
+            });
+
+            var machine20 = $("#machine20").slotMachine({
+                active: 0,
+                delay: 2000
+            });
+
+            var machine21 = $("#machine21").slotMachine({
+                active: 253,
+                delay: 2000
+            });
+
+            var machine22 = $("#machine22").slotMachine({
+                active: 345,
+                delay: 2000
+            });
+
+            var machine23 = $("#machine23").slotMachine({
+                active: 71,
+                delay: 2000
+            });
+
+            var machine24 = $("#machine24").slotMachine({
+                active: 100,
+                delay: 2000
+            });
+
+            var machine25 = $("#machine25").slotMachine({
+                active: 198,
+                delay: 2000
+            });
+
+            var machine26 = $("#machine26").slotMachine({
+                active: 215,
+                delay: 200
+            });
+
+            var machine27 = $("#machine27").slotMachine({
+                active: 202,
+                delay: 200
+            });
+
+            var machine28 = $("#machine28").slotMachine({
+                active: 470,
+                delay: 200
+            });
+
+            var machine29 = $("#machine29").slotMachine({
+                active: 216,
+                delay: 2000
+            });
+
+            var machine30 = $("#machine30").slotMachine({
+                active: 174,
+                delay: 2000
+            });
+
+            var machine31 = $("#machine31").slotMachine({
+                active: 141,
+                delay: 2000
+            });
+
+            var machine32 = $("#machine32").slotMachine({
+                active: 169,
+                delay: 2000
+            });
+
+            var machine33 = $("#machine33").slotMachine({
+                active: 99,
+                delay: 2000
+            });
+
+            var machine34 = $("#machine34").slotMachine({
+                active: 250,
+                delay: 500
+            });
+
+            var machine35 = $("#machine35").slotMachine({
+                active: 360,
+                delay: 500
+            });
+
+
+
+            var machine38 = $("#machine38").slotMachine({
+                active: 0,
+                delay: 2000
+            });
+
+            var machine40 = $("#machine40").slotMachine({
+                active: 0,
+                delay: 200,
+                direction: 'up'
+            });
+
+            var machine41 = $("#machine41").slotMachine({
+                active: 0,
+                delay: 200
+            });
+
+            function onComplete(active) {
+                var check = false;
+                var num = this.active;
+                luckNumber.forEach(function (number) {
+                    if (parseInt(number) == parseInt(num)) {
+                        check = true;
+                    }
+                });
+                console.log(check);
+                if (!check) {
+                    luckNumber.push(this.active);
+                }
+                else {
+                    this.shuffle(1, onComplete);
+                }
             }
-        </script>
-    </div>
+
+            // step five
+            $("a.shuffle1").click(function () {
+                $("#shuffle-five-check").val(1);
+                $('.slot-four').remove();
+                machine1.shuffle();
+                machine2.shuffle();
+                machine3.shuffle();
+                machine4.shuffle();
+                machine5.shuffle();
+            });
+
+            $('a.step-five.stop').click(function () {
+                var check =  $("#shuffle-five-check").val();
+                if (check==1) {
+                    $("#shuffle-five-check").val(0);
+                    machine1.shuffle(1, onComplete);
+                    machine2.shuffle(1, onComplete);
+                    machine3.shuffle(1, onComplete);
+                    machine4.shuffle(1, onComplete);
+                    machine5.shuffle(1, onComplete);
+                } else {
+                    alert("Vui lòng quay thưởng trước !");
+                }
+
+            })
+            // step three
+
+            $("a.shuffle3-one.stop").click(function () {
+                var check = $("#shuffle6-check").val();
+                if (check==1) {
+                    machine26.shuffle(1, onComplete);
+                } else {
+                    alert("Vui lòng quay thưởng trước!");
+                }
+
+            })
+            $("a.shuffle3-two.stop").click(function () {
+                var check = $("#shuffle6-check").val();
+                if (check==1) {
+                    machine27.shuffle(1, onComplete);
+                } else {
+                    alert("Vui lòng quay thưởng trước !");
+                }
+
+            })
+            $("a.shuffle3-three.stop").click(function () {
+                var check = $("#shuffle6-check").val();
+                if (check==1) {
+                    machine28.shuffle(1, onComplete);
+                } else {
+                    alert("Vui lòng quay thưởng trước !");
+                }
+
+            })
+
+            $("a.shuffle2").click(function () {
+                machine6.shuffle(8, onComplete);
+
+                setTimeout(function () {
+                    machine7.shuffle(8, onComplete);
+                }, 1000);
+
+                setTimeout(function () {
+                    machine8.shuffle(8, onComplete);
+                }, 2000);
+
+                setTimeout(function () {
+                    machine9.shuffle(8, onComplete);
+                }, 3000);
+
+                setTimeout(function () {
+                    machine10.shuffle(8, onComplete);
+                }, 4000);
+            });
+
+            $("a.shuffle3").click(function () {
+                machine11.shuffle(8, onComplete);
+
+                setTimeout(function () {
+                    machine12.shuffle(8, onComplete);
+                }, 1000);
+
+                setTimeout(function () {
+                    machine13.shuffle(8, onComplete);
+                }, 2000);
+
+                setTimeout(function () {
+                    machine14.shuffle(8, onComplete);
+                }, 3000);
+
+                setTimeout(function () {
+                    machine15.shuffle(8, onComplete);
+                }, 4000);
+            });
+
+            $("a.shuffle4").click(function () {
+                machine16.shuffle(8, onComplete);
+
+                setTimeout(function () {
+                    machine17.shuffle(8, onComplete);
+                }, 1000);
+
+                setTimeout(function () {
+                    machine18.shuffle(8, onComplete);
+                }, 2000);
+
+                setTimeout(function () {
+                    machine19.shuffle(8, onComplete);
+                }, 3000);
+
+                setTimeout(function () {
+                    machine20.shuffle(8, onComplete);
+                }, 4000);
+            });
+
+            $("a.shuffle5").click(function () {
+                machine21.shuffle(8, onComplete);
+
+                setTimeout(function () {
+                    machine22.shuffle(8, onComplete);
+                }, 1000);
+
+                setTimeout(function () {
+                    machine23.shuffle(8, onComplete);
+                }, 2000);
+
+                setTimeout(function () {
+                    machine24.shuffle(8, onComplete);
+                }, 3000);
+
+                setTimeout(function () {
+                    machine25.shuffle(8, onComplete);
+                }, 4000);
+            });
+
+            $("a.shuffle6").click(function () {
+                $('#shuffle6-check').val(1);
+                $('.slot-three').remove();
+                machine26.shuffle();
+                machine27.shuffle();
+                machine28.shuffle();
+            });
+
+
+            $("a.shuffle7").click(function () {
+                $('.slot-one').remove();
+                $('#shuffle7-check').val(1);
+                machine38.shuffle();
+            });
+
+            $("a.shuffle8.stop").click(function () {
+                var check = $('#shuffle7-check').val();
+                if (check==1) {
+                    $('#shuffle7-check').val(0);
+                    machine38.shuffle(1, onComplete);
+                } else if (check == 0) {
+                    alert('Vui lòng quay thưởng trước!');
+                }
+            });
+
+            $("a.shuffle9").click(function () {
+                machine40.shuffle();
+                machine41.shuffle();
+            });
+            $("a.shuffle-two-start").click(function () {
+                $('#shuffle-two-check').val(1);
+                $('.slot-two').remove();
+                machine34.shuffle();
+                machine35.shuffle();
+
+            })
+            $("a.shuffle2-one.stop").click(function () {
+                var check = $("#shuffle-two-check").val();
+                if (check==1) {
+                    machine34.shuffle(1, onComplete);
+                } else {
+                    alert("Vui lòng quay thưởng trước !");
+                }
+            })
+            $("a.shuffle2-two.stop").click(function () {
+                var check = $("#shuffle-two-check").val();
+                if (check==1) {
+                    machine35.shuffle(1, onComplete);
+                } else {
+                    alert("Vui lòng quay thưởng trước !");
+                }
+            })
+            $("a.shuffle-two-stop").click(function () {
+                var check = $('#shuffle-two-check').val();
+                if (check==1) {
+                    $('#shuffle-two-check').val(0);
+                    machine34.shuffle(1, onComplete);
+                    machine35.shuffle(1, onComplete);
+                } else if (check == 0) {
+                    alert('Vui lòng quay thưởng trước!');
+                }
+
+            })
+
+            $("a.shuffle11.stop").click(function () {
+                machine40.stop();
+            });
+            $("a.shuffle12.stop").click(function () {
+                machine41.stop();
+            });
+
+        });
+
+        function zeroPad(nr, base) {
+            var len = (String(base).length - String(nr).length) + 1;
+            return len > 0 ? new Array(len).join('0') + nr : nr;
+        }
+    </script>
+</div>
 </body>
 </html>
