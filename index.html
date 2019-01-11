@@ -578,10 +578,18 @@
                 if (check==1) {
                     $("#shuffle-five-check").val(0);
                     machine1.shuffle(1, onComplete);
-                    machine2.shuffle(1, onComplete);
-                    machine3.shuffle(1, onComplete);
-                    machine4.shuffle(1, onComplete);
-                    machine5.shuffle(1, onComplete);
+                    setTimeout(function () {
+                        machine2.shuffle(1, onComplete);
+                    },1000)
+                    setTimeout(function () {
+                        machine3.shuffle(1, onComplete);
+                    },2000);
+                    setTimeout(function () {
+                        machine4.shuffle(1, onComplete);
+                    },3000)
+                    setTimeout(function () {
+                        machine5.shuffle(1, onComplete);
+                    },4000)
                 } else {
                     alert("Vui lòng quay thưởng trước !");
                 }
@@ -617,85 +625,10 @@
 
             })
 
-            $("a.shuffle2").click(function () {
-                machine6.shuffle(8, onComplete);
 
-                setTimeout(function () {
-                    machine7.shuffle(8, onComplete);
-                }, 1000);
 
-                setTimeout(function () {
-                    machine8.shuffle(8, onComplete);
-                }, 2000);
 
-                setTimeout(function () {
-                    machine9.shuffle(8, onComplete);
-                }, 3000);
 
-                setTimeout(function () {
-                    machine10.shuffle(8, onComplete);
-                }, 4000);
-            });
-
-            $("a.shuffle3").click(function () {
-                machine11.shuffle(8, onComplete);
-
-                setTimeout(function () {
-                    machine12.shuffle(8, onComplete);
-                }, 1000);
-
-                setTimeout(function () {
-                    machine13.shuffle(8, onComplete);
-                }, 2000);
-
-                setTimeout(function () {
-                    machine14.shuffle(8, onComplete);
-                }, 3000);
-
-                setTimeout(function () {
-                    machine15.shuffle(8, onComplete);
-                }, 4000);
-            });
-
-            $("a.shuffle4").click(function () {
-                machine16.shuffle(8, onComplete);
-
-                setTimeout(function () {
-                    machine17.shuffle(8, onComplete);
-                }, 1000);
-
-                setTimeout(function () {
-                    machine18.shuffle(8, onComplete);
-                }, 2000);
-
-                setTimeout(function () {
-                    machine19.shuffle(8, onComplete);
-                }, 3000);
-
-                setTimeout(function () {
-                    machine20.shuffle(8, onComplete);
-                }, 4000);
-            });
-
-            $("a.shuffle5").click(function () {
-                machine21.shuffle(8, onComplete);
-
-                setTimeout(function () {
-                    machine22.shuffle(8, onComplete);
-                }, 1000);
-
-                setTimeout(function () {
-                    machine23.shuffle(8, onComplete);
-                }, 2000);
-
-                setTimeout(function () {
-                    machine24.shuffle(8, onComplete);
-                }, 3000);
-
-                setTimeout(function () {
-                    machine25.shuffle(8, onComplete);
-                }, 4000);
-            });
 
             $("a.shuffle6").click(function () {
                 $('#shuffle6-check').val(1);
